@@ -1,0 +1,24 @@
+.basement {
+  &__contact {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  &__list:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__address {
+    color: $primary-wight-color;
+  }
+  &__email,
+  &__tel {
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: color 250ms var(--time-function);
+
+    &:focus,
+    &:hover {
+      color: $accent-text-color;
+    }
+  }
+}

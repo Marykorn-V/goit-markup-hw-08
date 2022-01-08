@@ -1,0 +1,27 @@
+.navigation__list-contact + .navigation__list-contact {
+  margin-left: 50px;
+}
+.navigation__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $primary-text-color;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+
+  transition: color 250ms $time-function;
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+.navigation__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}

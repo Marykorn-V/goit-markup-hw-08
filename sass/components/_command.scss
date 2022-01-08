@@ -1,0 +1,85 @@
+.command {
+  @include list;
+
+  &__list {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: $primary-wight-color;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 16px;
+  }
+  &__name {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    color: $title-text-color;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.87;
+  }
+  &__profession {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.87;
+  }
+  &__block-icon {
+    padding-bottom: 30px;
+  }
+  &__list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+  &__list-link:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    color: $icon-color;
+
+    transition: background 250ms $time-function;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &:focus,
+    &:hover {
+      background-color: $accent-text-color;
+      color: $primary-wight-color;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+
+    fill: currentColor;
+    transition: fill 250ms $time-function;
+
+    &:hover,
+    &:focus {
+      fill: $primary-wight-color;
+    }
+  }
+}

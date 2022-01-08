@@ -1,0 +1,36 @@
+%logo {
+  display: flex;
+
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+%logo-blue {
+  display: block;
+
+  color: $accent-text-color;
+}
+.navigation__link-logo {
+  @extend %logo;
+  align-items: center;
+  margin-right: 93px;
+
+  color: #000000;
+}
+.navigation__logo--blue {
+  @extend %logo-blue;
+}
+.basement__link {
+  @extend %logo;
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: $primary-wight-color;
+
+  align-items: center;
+}
+.basement__logo {
+  @extend %logo-blue;
+}

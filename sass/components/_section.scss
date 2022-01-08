@@ -1,0 +1,11 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-features {
+    padding-top: 94px;
+  }
+  &.command {
+    background-color: $third-bgc-color;
+  }
+}
