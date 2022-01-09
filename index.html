@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/modern-normalize.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <!--Верхняя линия-->
@@ -31,23 +32,88 @@
                     </li>
                 </ul>
             </nav>
-            <ul class="navigation__list">
-                <li class="navigation__list-contact">
-                    <a href="mailto:info@devstudio.com" class="navigation__link">
-                        <svg class="navigation__icon">
-                            <use href="./images/icons.svg#envelope"></use>
+            <div class="block-nav-contact">
+                <ul class="navigation__list">
+                    <li class="navigation__list-contact">
+                        <a href="mailto:info@devstudio.com" class="navigation__link">
+                            <svg class="navigation__icon">
+                                <use href="./images/icons.svg#envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="navigation__list-contact">
+                        <a href="tel:+380961111111" class="navigation__link">
+                            <svg class="navigation__icon">
+                                <use href="./images/icons.svg#smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Mobile menu -->
+            <button class="menu-button-open">
+                <svg class="menu-button-open__icon" width="40" height="40" aria-label="Переключатеь мобильного меню">
+                    <use href="./images/icons.svg#menu"></use>
+                </svg>
+            </button>
+            
+                <div class="menu is-hidden">
+                    <button class="menu__button-close">
+                        <svg class="menu__icon" width="40" height="40">
+                            <use href="images/icons.svg#close"></use>
                         </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="navigation__list-contact">
-                    <a href="tel:+380961111111" class="navigation__link">
-                        <svg class="navigation__icon">
-                            <use href="./images/icons.svg#smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
+                    </button>
+
+                    <div class="mob-menu">
+                        <div class="menu-block">
+                            <ul class="menu__list">
+                                <li class="menu__link-content">
+                                    <a href="./index.html" class="menu__site-nav current">Студия</a>
+                                </li>
+                                <li class="menu__link-content">
+                                    <a href="./portfolio.html" class="menu__site-nav">Портфолио</a>
+                                </li>
+                                <li class="menu__link-content">
+                                    <a href="" class="menu__site-nav">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact-block">
+                            <ul class="menu__list">
+                                <li class="menu__list-contact">
+                                    <a href="tel:+380961111111" class="menu__mob-link">
+                                
+                                        +38 096 111 11 11</a>
+                                </li>
+                                <li class="menu__list-contact">
+                                    <a href="mailto:info@devstudio.com" class="menu__mail-link">
+                                        
+                                        info@devstudio.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="social">
+                            <ul class="social__menu">
+                                <li class="social__list">
+                                    <a href="" target="_blank" class="social__link">Instagram<span class="social__line"></span></a>
+                                </li>
+                                <li class="social__list">
+                                    <a href="" target="_blank" class="social__link">Twitter<span class="social__line"></span></a>
+                                </li>
+                                <li class="social__list">
+                                    <a href="" target="_blank" class="social__link">Facebook<span class="social__line"></span></a>
+                                </li>
+                                <li class="social__list">
+                                    <a href="" target="_blank" class="social__link">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </header>
     <main>
@@ -59,7 +125,7 @@
                 <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
             </div>
             <!-- Модалка -->
-            <div class="backdrop is-hidden" data-modal>
+            <!-- <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
                     <button type="button" class="modal__close-btn" data-modal-close>
                         <svg class="modal__close-icon">
@@ -107,7 +173,7 @@
                         <button type="submit" class="modal__btn-send">Отправить</button>
                     </form>                    
                 </div>
-            </div>
+            </div> -->
         </section>
         <!--Особенности-->
         <section class="section-features">
@@ -153,7 +219,7 @@
             </div>
         </section>
         <!--Чем мы занимаемся-->
-        <section class="section">
+        <section class="section work">
             <div class="container work">
                 <h2 class="work__title">Чем мы занимаемся</h2>
                 <ul class="work__list">
@@ -186,7 +252,11 @@
                 <h2 class="title">Наша команда</h2>
                 <ul class="command">
                     <li class="command__list">
-                        <img src="./images/command/img.jpg" alt="Игорь Демьяненко" width="270">
+  
+                            <img class="command__img"
+                            srcset="./images/command/img.jpg 1x, ./images/command/img-command1-2x.jpg 2x"
+                            src="./images/command/img.jpg" alt="Игорь Демьяненко">
+
                         <div class="command__content">
                             <h3 class="command__name">Игорь Демьяненко</h3>
                             <p lang="en" class="command__profession">Product Designer</p>
@@ -225,7 +295,9 @@
                         </div>
                     </li>
                     <li class="command__list">
-                        <img src="./images/command/img_1.jpg" alt="Ольга Репина" width="270">
+                        <img class="command__img"
+                        srcset="./images/command/img_1.jpg 1x, ./images/command/img-command2-2x.jpg 2x"
+                        src="./images/command/img_1.jpg" alt="Ольга Репина">
                         <div class="command__content">
                             <h3 class="command__name">Ольга Репина</h3>
                             <p lang="en" class="command__profession">Frontend Developer</p>
@@ -264,7 +336,9 @@
                         </div>
                     </li>
                     <li class="command__list">
-                        <img src="./images/command/img_2.jpg" alt="Николай Тарасов" width="270">
+                        <img class="command__img" 
+                        srcset="./images/command/img_2.jpg 1x, ./images/command/img-command3-2x.jpg 2x"
+                        src="./images/command/img_2.jpg" alt="Николай Тарасов">
                         <div class="command__content">
                             <h3 class="command__name">Николай Тарасов</h3>
                             <p lang="en" class="command__profession">Marketing</p>
@@ -303,7 +377,9 @@
                         </div>
                     </li>
                     <li class="command__list">
-                        <img src="./images/command/img_3.jpg" alt="Михаил Ермаков" width="270">
+                        <img class="command__img" 
+                        srcset="./images/command/img_3.jpg 1x, ./images/command/img-command4-2x.jpg 2x"
+                        src="./images/command/img_3.jpg" alt="Михаил Ермаков">
                         <div class="command__content">
                             <h3 class="command__name">Михаил Ермаков</h3>
                             <p lang="en" class="command__profession">UI Designer</p>
@@ -345,7 +421,7 @@
            </div>
         </section>
         <!-- Постоянные клиенты -->
-        <section class="section">
+        <!-- <section class="section">
             <div class="container">
                 <h2 class="title">Постоянные клиенты</h2>
                 <ul class="customer">
@@ -393,10 +469,10 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     </main>
     <!--Подвал-->
-    <footer>
+    <!-- <footer>
         <div class="container basement">
             <div>
                 <a href="./index.html" class="basement__link"><span class="basement__logo">Web</span>Studio</a>
@@ -460,7 +536,8 @@
             </div>
         </div>
         
-    </footer>
+    </footer> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

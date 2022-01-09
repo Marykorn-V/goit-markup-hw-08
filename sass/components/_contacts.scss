@@ -1,11 +1,11 @@
-.navigation__list-contact + .navigation__list-contact {
-  margin-left: 50px;
+@media (min-width: 1200px) {
+  .navigation__list-contact + .navigation__list-contact {
+    margin-left: 50px;
+  }
 }
 .navigation__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   color: $primary-text-color;
 
@@ -17,6 +17,16 @@
   &:hover,
   &:focus {
     color: $accent-text-color;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 1199px) {
+  .navigation__list-contact:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 .navigation__icon {

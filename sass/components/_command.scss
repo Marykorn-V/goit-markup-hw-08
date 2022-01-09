@@ -1,15 +1,24 @@
 .command {
   @include list;
-
+  @media (max-width: 480px) {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    @media (max-width: 480px) {
+      max-width: 100%;
+    }
+  }
   &__list {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
     background-color: $primary-wight-color;
-
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media (max-width: 480px) {
+      margin-bottom: 30px;
+      max-width: 450px;
     }
   }
   &__content {
@@ -81,5 +90,10 @@
     &:focus {
       fill: $primary-wight-color;
     }
+  }
+}
+@media (min-width: 1200px) {
+  .command__list:not(:last-child) {
+    margin-right: 30px;
   }
 }
