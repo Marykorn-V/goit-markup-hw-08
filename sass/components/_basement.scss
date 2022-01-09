@@ -3,9 +3,17 @@
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__list:not(:last-child) {
     margin-bottom: 9px;
+    @media (max-width: 767px) {
+      margin-bottom: 8px;
+    }
   }
   &__address {
     color: $primary-wight-color;
@@ -20,5 +28,13 @@
     &:hover {
       color: $accent-text-color;
     }
+  }
+}
+@media (max-width: 767px) {
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
   }
 }

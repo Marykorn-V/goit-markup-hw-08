@@ -125,7 +125,7 @@
                 <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
             </div>
             <!-- Модалка -->
-            <!-- <div class="backdrop is-hidden" data-modal>
+            <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
                     <button type="button" class="modal__close-btn" data-modal-close>
                         <svg class="modal__close-icon">
@@ -173,7 +173,7 @@
                         <button type="submit" class="modal__btn-send">Отправить</button>
                     </form>                    
                 </div>
-            </div> -->
+            </div>
         </section>
         <!--Особенности-->
         <section class="section-features">
@@ -252,10 +252,14 @@
                 <h2 class="title">Наша команда</h2>
                 <ul class="command">
                     <li class="command__list">
-  
-                            <img class="command__img"
-                            srcset="./images/command/img.jpg 1x, ./images/command/img-command1-2x.jpg 2x"
-                            src="./images/command/img.jpg" alt="Игорь Демьяненко">
+                        <picture>
+                            <source srcset="./images/command/img1.jpg 1x, ./images/command/img1-2x.jpg 2x" media="(min-width:1200px)">
+                            <source srcset="./images/tablet/command1-tab-1x.jpg 1x, ./images/tablet/command1-tab-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/mobile/command1-mob-1x.jpg 1x, ./images/mobile/command1-mob-2x.jpg 2x" media="(min-width:320px)">
+
+                            <img class="command__img" srcset="./images/command/img1.jpg 1x, ./images/command/img1-2x.jpg 2x"
+                                src="./images/mobile/command1-mob-1x.jpg" alt="Игорь Демьяненко">
+                        </picture>
 
                         <div class="command__content">
                             <h3 class="command__name">Игорь Демьяненко</h3>
@@ -295,9 +299,17 @@
                         </div>
                     </li>
                     <li class="command__list">
-                        <img class="command__img"
-                        srcset="./images/command/img_1.jpg 1x, ./images/command/img-command2-2x.jpg 2x"
-                        src="./images/command/img_1.jpg" alt="Ольга Репина">
+                        <picture>
+                            <source srcset="./images/command/img2.jpg 1x, ./images/command/img2-2x.jpg 2x" media="(min-width:1200px)">
+                            <source srcset="./images/tablet/command2-tab-1x.jpg 1x, ./images/tablet/command2-tab-2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <source srcset="./images/mobile/command2-mob-1x.jpg 1x, ./images/mobile/command2-mob-2x.jpg 2x"
+                                media="(min-width:320px)">
+                        
+                            <img class="command__img" srcset="./images/command/img2.jpg 1x, ./images/command/img2-2x.jpg 2x"
+                                src="./images/mobile/command2-mob-1x.jpg" alt="Ольга Репина">
+                        </picture>
+                      
                         <div class="command__content">
                             <h3 class="command__name">Ольга Репина</h3>
                             <p lang="en" class="command__profession">Frontend Developer</p>
@@ -336,9 +348,17 @@
                         </div>
                     </li>
                     <li class="command__list">
-                        <img class="command__img" 
-                        srcset="./images/command/img_2.jpg 1x, ./images/command/img-command3-2x.jpg 2x"
-                        src="./images/command/img_2.jpg" alt="Николай Тарасов">
+                        <picture>
+                            <source srcset="./images/command/img3.jpg 1x, ./images/command/img3-2x.jpg 2x" media="(min-width:1200px)">
+                            <source srcset="./images/tablet/command3-tab-1x.jpg 1x, ./images/tablet/command3-tab-2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <source srcset="./images/mobile/command3-mob-1x.jpg 1x, ./images/mobile/command3-mob-2x.jpg 2x"
+                                media="(min-width:320px)">
+                        
+                            <img class="command__img" srcset="./images/command/img3.jpg 1x, ./images/command/img3-2x.jpg 2x"
+                                src="./images/mobile/command1-mob-1x.jpg" alt="Николай Тарасов">
+                        </picture>
+                        
                         <div class="command__content">
                             <h3 class="command__name">Николай Тарасов</h3>
                             <p lang="en" class="command__profession">Marketing</p>
@@ -377,9 +397,17 @@
                         </div>
                     </li>
                     <li class="command__list">
-                        <img class="command__img" 
-                        srcset="./images/command/img_3.jpg 1x, ./images/command/img-command4-2x.jpg 2x"
-                        src="./images/command/img_3.jpg" alt="Михаил Ермаков">
+                        <picture>
+                            <source srcset="./images/command/img4.jpg 1x, ./images/command/img4-2x.jpg 2x" media="(min-width:1200px)">
+                            <source srcset="./images/tablet/command4-tab-1x.jpg 1x, ./images/tablet/command4-tab-2x.jpg 2x"
+                                media="(min-width:768px)">
+                            <source srcset="./images/mobile/command4-mob-1x.jpg 1x, ./images/mobile/command4-mob-2x.jpg 2x"
+                                media="(min-width:320px)">
+                        
+                            <img class="command__img" srcset="./images/command/img4.jpg 1x, ./images/command/img4-2x.jpg 2x"
+                                src="./images/mobile/command1-mob-1x.jpg" alt="Михаил Ермаков">
+                        </picture>
+                        
                         <div class="command__content">
                             <h3 class="command__name">Михаил Ермаков</h3>
                             <p lang="en" class="command__profession">UI Designer</p>
@@ -421,7 +449,7 @@
            </div>
         </section>
         <!-- Постоянные клиенты -->
-        <!-- <section class="section">
+        <section class="section">
             <div class="container">
                 <h2 class="title">Постоянные клиенты</h2>
                 <ul class="customer">
@@ -469,12 +497,12 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
     </main>
     <!--Подвал-->
-    <!-- <footer>
+    <footer>
         <div class="container basement">
-            <div>
+            <div class="footer-logo">
                 <a href="./index.html" class="basement__link"><span class="basement__logo">Web</span>Studio</a>
                 
                 <ul class="basement__contact">
@@ -536,7 +564,7 @@
             </div>
         </div>
         
-    </footer> -->
+    </footer>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
 </body>

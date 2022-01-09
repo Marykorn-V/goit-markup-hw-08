@@ -2,9 +2,20 @@
   display: inline-block;
   margin-left: 93px;
   margin-top: 12px;
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
 }
 .form {
   display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &-title {
     margin: 0;
@@ -72,5 +83,9 @@
     &::placeholder {
       color: #ffffff;
     }
+  }
+  @media (max-width: 767px) {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }

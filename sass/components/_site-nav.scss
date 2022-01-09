@@ -20,7 +20,7 @@
     margin-right: 50px;
   }
 }
-@media (min-width: 481px) {
+@media (min-width: 768px) {
   .navigation .navigation__list {
     min-width: 294px;
     justify-content: space-between;
@@ -35,7 +35,7 @@
     }
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .block-nav-contact {
     display: none;
   }
@@ -123,7 +123,7 @@
       fill: $accent-text-color;
     }
   }
-  @media (min-width: 481px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
