@@ -29,9 +29,12 @@
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%) scale(1);
-  @media (max-width: 767px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    top: 35%;
+  }
+  @media (max-width: 1199px) {
     max-width: 450px;
-    max-height: 609px;
+    height: 609px;
   }
   &__close-btn {
     position: absolute;
@@ -81,7 +84,7 @@
     margin-top: 40px;
     margin-bottom: 12px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       padding-left: 40px;
       padding-right: 40px;
     }
@@ -205,6 +208,7 @@
   border-radius: 4px;
   margin-right: 7px;
   margin-bottom: -2px;
+  cursor: pointer;
 
   transition: background-color 250ms var(--time-function),
     border-color 250ms var(--time-function);

@@ -1,9 +1,14 @@
 .features {
   @include list;
+
   @media (max-width: 767px) {
     display: block;
     justify-content: center;
     align-items: center;
+  }
+  @media (min-width: 767px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin: -15px;
   }
   &__list {
     width: 270px;
@@ -15,6 +20,10 @@
     @media (max-width: 767px) {
       margin-right: 0;
       width: 100%;
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      margin: 15px;
+      width: calc((100% - 4 * 15px) / 2);
     }
   }
   &__bgc-icon {
