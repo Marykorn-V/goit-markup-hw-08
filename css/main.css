@@ -1160,9 +1160,14 @@ footer {
   position: absolute;
   transform: translate(-50%, -50%) scale(1);
 }
+@media (max-width: 767px) {
+  .modal {
+    top: 50%;
+  }
+}
 @media (min-width: 768px) and (max-width: 1199px) {
   .modal {
-    top: 35%;
+    top: 50%;
   }
 }
 @media (max-width: 1199px) {

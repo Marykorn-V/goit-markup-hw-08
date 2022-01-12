@@ -29,8 +29,11 @@
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%) scale(1);
+  @media (max-width: 767px) {
+    top: 50%;
+  }
   @media (min-width: 768px) and (max-width: 1199px) {
-    top: 35%;
+    top: 50%;
   }
   @media (max-width: 1199px) {
     max-width: 450px;
