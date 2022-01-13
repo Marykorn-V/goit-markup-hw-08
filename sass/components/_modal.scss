@@ -1,3 +1,6 @@
+body.modal-open {
+  overflow: hidden;
+}
 .backdrop {
   width: 100vw;
   height: 100vh;
@@ -7,9 +10,16 @@
   top: 0;
   left: 0;
   z-index: 1;
+  overflow-y: scroll;
 
   transition: opacity 1000ms var(--time-function),
     visibility 1000ms var(--time-function);
+
+  @media (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .is-hidden {
   visibility: hidden;
@@ -21,23 +31,21 @@
   transition: transform 1000ms var(--time-function);
 }
 .modal {
-  width: 528px;
   min-height: 581px;
   border-radius: 4px;
   background-color: var(--primary-wight-color);
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%) scale(1);
-  @media (max-width: 767px) {
-    top: 50%;
-  }
-  @media (min-width: 768px) and (max-width: 1199px) {
-    top: 50%;
-  }
+
   @media (max-width: 1199px) {
     max-width: 450px;
     height: 609px;
+    position: relative;
+  }
+  @media (min-width: 1200px) {
+    width: 528px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
   }
   &__close-btn {
     position: absolute;
@@ -90,6 +98,8 @@
     @media (max-width: 1199px) {
       padding-left: 40px;
       padding-right: 40px;
+      padding-top: 40px;
+      margin-top: 0;
     }
   }
 
