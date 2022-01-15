@@ -209,6 +209,10 @@ body.modal-open {
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
+  @media (max-width: 1199px) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
 }
 .modal__checkbox {
   -webkit-appearance: none;

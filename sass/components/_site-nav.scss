@@ -20,7 +20,7 @@
     margin-right: 50px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .navigation .navigation__list {
     min-width: 294px;
     justify-content: space-between;
@@ -43,7 +43,11 @@
     display: none;
   }
 }
-
+.block-nav-contact {
+  @media (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 84px;
+  }
+}
 .navigation__site-nav {
   display: block;
   padding-top: 32px;
